@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Class Example</title>
+</head>
+<body>
+    <script>
+        //To create a web application that allows teachers to enter their details to store into the database
+        //Details: firstname, lastname, age, email  --- values that you want to capture to store into database
+
+        //1) Create object template - class
+        //Class is able to do encapsulation (hidden/hide details from the other functions or classes)
+        class Person
+        {
+            //2) Initiatise the instance variable of Person class by creating a constructor
+            constructor(firstname, lastname, age, email, course)       //parameters are passed in by instance object
+            {
+                //assign the param firstname to the instance variable in the class object (Person) 
+                //- without inheritance and compostion and abstractions and polymophism theory
+                this._firstname = firstname;     //this refers to the class object (e.g. Person)
+                this._lastname = lastname;
+                this._age = age;
+                this._email = email;
+                this._course = course;
+
+                //own instance variable without parameter pass in
+                this._modules = [];              //store the module that the teacher teaches in an array
+            }
+            
+            //getter and setter property methods - functions that retrieve or set the value of the
+            //class instance variables
+            //We do not allow other classes/functions/programme to directly access our class instance variable
+
+            //create a getter!!!!! property method for firstname
+            get firstname()
+            {
+                //exception handling
+                return this._firstname;
+            }
+
+            //create a setter!!!!! property method for firstname
+            set firstname(fname)
+            {
+                this._firstname = fname;
+            }
+
+            get lastname()
+            {
+                return this._lastname;
+            }
+
+            set lastname(lname)
+            {
+                this._lastname = lname;
+            }
+
+            get age()
+            {
+                return this._age;
+            }
+
+            set age(myage)
+            {
+                this._age = myage;
+            }
+
+            get email()
+            {
+                return this._email;
+            }
+
+            set email(myemail)
+            {
+                this._email = myemail;
+            }
+
+            //Other methods (a bunch of functions that performs actions/tasks - calculation, string concat)
+            displayDetails()
+            {
+                // Hello I am Jean Looi, my age is 18, and my email is jean@gmail.com
+                return `Hello I am ${this._firstname} ${this._lastname}, my age is ${this._age} and my email is ${this._email}.`;
+            }
+
+            //addModule - add a new module to the array (value: module code, module title, module description)
+            addModule(code, title, description)
+            {
+                //push the code, title and description into the this._module array
+                const item = {
+                    iCode: code,
+                    iTitle: title,
+                    iDescription: description
+                };
+
+                this._modules.push(item);
+            }
+
+            //displayModule - show all the modules that the teacher is currently teaching
+            displayModule()
+            {
+                console.log(`Hello ${this._firstname}, these are the modules that you are teaching:\n`);
+
+                //For Loop to retrieve each object in the this._module array
+                for (var i=0; i< this._modules.length; i++)
+                {
+                    console.log(`Module Code: ${this._modules[i].iCode}, Title: ${this._modules[i].iTitle}, Description: ${this._modules[i].iDescription}`);
+                }
+
+            }
+
+        }   //End of Person Class
+
+
+        //Out if Person Class - Create new Instance of the class, passing in values to the class
+        const teacherChemistry = new Person('Jean','Looi',18,'jean@gmail.com','chemistry');
+        console.log(teacherChemistry.firstname);
+
+        teacherChemistry.firstname = 'Dave';
+        console.log(teacherChemistry.firstname);
+
+        teacherChemistry.addModule('TP123','JFSD','Junior Full-Stack Developer');
+        teacherChemistry.addModule('TP345', 'CP','Cloud Computing');
+        teacherChemistry.displayModule();
+
+
+        const teacher2 = new Person('Bryan', 'Chew', 15, 'bryan@gmail.com','Math');
+        console.log(teacher2.firstname);
+
+        teacher2.email = 'bryanchew@gmail.com'
+        console.log(teacher2.email);
+
+
+        teacher2.addModule('TP123','JFSD','Junior Full-Stack Developer');
+        teacher2.addModule('TP888', 'IA', 'Introduction to Analytic');
+        teacher2.displayModule();
+
+        //print Hello I am Jean Looi, my age is 18, and my email is jean@gmail.com
+        //print Hello I am Bryan Chew, my age is 15, and my email is bryanchew@gmail.com
+        console.log(teacherChemistry.displayDetails());
+        console.log(teacher2.displayDetails());
+
+
+    </script>
+</body>
+</html>

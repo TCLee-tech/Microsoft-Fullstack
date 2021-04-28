@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .flex-container {
+        display: flex;
+        height: 400px;
+        border: 1px solid #000;
+      }
+
+      .flex-container > div {
+        margin: 0px;
+        padding: 0 px
+      } 
+
+      #greenSpace {
+        background-color: darkgreen;
+      }
+
+      #whiteSpace {
+        background-color: white;
+      }
+
+      #redSpace {
+        background-color: darkred;
+      }
+
+      .flexItem {
+        flex-basis: 200px;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+        <div id="greenSpace" class="flexItem">1</div>
+        <div id="whiteSpace" class="flexItem">2</div>
+        <div id="redSpace" class="flexItem">3</div>
+    </div>
+
+  </body>
+</html>

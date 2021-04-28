@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>The value is: <span id="myValue">something</span></p>
+    
+    <script>
+        //Declare your variables and assign the values
+
+
+        //Global Variable - in the Global Scope
+
+        var car = "Toyota";            // Data type is string
+        var myAge = 22;                 //Data type is number camel case
+        var numOne = 38;
+        var numTwo = 14;
+        var sum = numOne + numTwo;
+        var corn = "corn", flour = "flour", milk = "milk", apples = "apples";
+
+        console.log(sum);           //Log the value = 52
+        console.log(typeof sum);    //Log the data type = number
+
+        document.getElementById("myValue").innerHTML = sum;
+
+        //log the data type of car and myAge
+        console.log(typeof car);
+        console.log(typeof myAge);
+        
+
+        //Casting -> number change to string
+        myAge = myAge.toString();
+        console.log(typeof myAge);
+
+
+
+        function myFunction()
+        {
+                //Do something
+                // Function variable - in the Function Scope
+                var myPrice = 20;
+        }
+
+        myFunction();
+
+
+        var yearOfBirth = 1992;
+        var currentYear = 2020;
+        var age = currentYear - yearOfBirth;
+        var possibleAge = age + 1;
+
+        console.log("Your possibly " + age + " or " + possibleAge + " depending on the month of the year.")
+
+
+
+        var name = "Jean Looi", locate = "SG", hobby = "cycling";
+        console.log("Hi, my name is " + name + ". I live in " + locate + " and enjoy " + hobby);
+
+        
+        
+
+    </script>
+
+</body>
+</html>

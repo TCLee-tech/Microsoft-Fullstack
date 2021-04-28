@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal & String Intepolation Basic</title>
+</head>
+<body>
+    
+    <script>
+        var myName = 'Jean';
+
+        //without Template Literal
+        console.log("Hello I am " + myName + ". I like cats");
+
+        //Template Literal way
+        //Not single quote '', this is a backtick
+        console.log(`Hello I am ${myName}. and I like to eat salmon`);  
+        
+        //Array
+        var myFriends = ['Tom', 'Eve', 'Mary'];
+        console.log(`My friends are ${myFriends}`);
+        console.log(`My Best friend is ${myFriends[1]}`);
+
+        //without Template Literal
+        console.log('This is a \"nested string 1\".');
+
+        //Template Literal way
+        console.log(`This is a "nested string 2".`)
+        console.log(`This is a 'nested string 3'`)
+
+
+        //without Template Literal - Mutil-line strings
+        console.log('string text line 1\n' +
+        'string text line 2\n' + 
+        'string text line 3');
+
+         //Template Literal way
+         console.log(`string text line 4
+                string text line 5\nstring text line 6`);
+
+    </script>
+
+</body>
+</html>

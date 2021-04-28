@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript basic exercise 1</title>
+</head>
+<body>
+    <p>Hello name</p>
+    <p>welcome</p>
+    <button type="submit" onclick="changeName()">Change the name!</button>
+    
+    <script>
+        //create a function changeName
+        function changeName()
+        {
+            //(1) prompt user to key in his/her name
+            //(2) store the name into a variable(container): var or let
+            let person = prompt("What is your name", "Harry Potter");
+
+            //concate
+            document.getElementsByTagName("p")[0].innerHTML = "<b><i>Hello</i></b>" + person + "! How are you today?"
+        }
+
+    </script>
+
+</body>
+</html>

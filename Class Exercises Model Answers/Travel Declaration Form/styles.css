@@ -1,0 +1,88 @@
+   /* Comment here 
+(1) CSS using tag name
+*/
+body {
+    background-color:beige;
+}
+
+H3{
+    color: aqua;
+}
+
+/* (2) Using ID as the selector to style the tag */
+#firstp {
+    color: firebrick;
+}
+
+/* (3) Using class as the selctor to style to tag */
+.otherp {
+    color: green;
+}
+
+/*p {
+    color: red;
+}*/
+
+#productTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+    
+    #productTable td, #customers th {
+    border: 1px solid #ddd;
+    padding: 15px;
+    }
+    
+    #productTable tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #productTable tr:hover {background-color: #ddd;}
+    
+    #productTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* This CSS section is for Travel Reservation Form */
+
+/* Style the formcontainer width, and set to the center of the screen */
+
+.formcontainer {
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* set font to 18px, and font family */
+label, input, button, legend, select, .title {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the inputs and select */
+input:not([type=radio]):not([type=checkbox]), select {
+    width: 50%;
+    padding: 10px 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 14px 20px;
+    margin: 8px auto;
+    display: block;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /*margin: auto;*/
+}
+
+button:hover {
+    background-color:darkgreen;
+}

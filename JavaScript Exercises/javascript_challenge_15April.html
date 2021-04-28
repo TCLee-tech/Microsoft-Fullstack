@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Age Calculator-->
+    <!--Store birth year in a variable. Store a future year in another variable. 
+        Calculate your possible ages for the future years and display in console. 
+        Example, if you were born in 1998, then in 2026, you'll be 37  or 38, 
+        depending on the month-->
+
+    <!--Create an information card. Create information about a person, such as Name,
+    Location, Hobby. Each piece of info should be a variable. 
+    Display the card with the info in the correct place. 
+    Example:"Hi, my name is xxxx. I live in yyy and my favourite drink is zzz"-->
+    
+    <script>
+    window.writeValues = function(form) 
+    {
+    var birth_year = form.birth_year.value;
+    var future_date = form.future_date.value;
+    age = future_date - birth_year;
+    document.getElementById("years").innerHTML = age;   
+    document.getElementById("ABC").innerHTML = future_date;
+    }
+
+</script>
+
+<form action="backend data link" method="GET">
+    <label for="birth_year">What is your year of birth?</label>
+    <input id="birth_year" type="number" name="birth_year"></input>   
+
+    <br></br>
+    <label for="future_date">Give me a year in the future</label>
+    <input id="future_date" type="number" name="future_date"></input>   
+
+    <br></br>
+    <input type="button" value="Submit" onClick="writeValues(form)">
+
+    <p>In </p><p id="ABC"></p><p>, your age is</p><p id="years"></p>
+</form>
+
+
+<!-- Jean answer-->
+var yearOfBirth = 1992;
+var currentYear = 2020;
+var age = currentYear - yearOfBirth;
+var possibleAge = age +1;
+
+console.log("You are possibly" + age + " or " + possibleAge + " depending on the month of the year.")
+
+
+</body>
+</html>
