@@ -1,0 +1,24 @@
+{
+  "name": "class-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "myIndex": "node index.js",
+    "myCalculate": "node calculate.js",
+    "myGetUser": "node getUser.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "LTC",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "complete-randomer": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
