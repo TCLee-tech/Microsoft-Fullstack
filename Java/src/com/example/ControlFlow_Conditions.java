@@ -38,15 +38,15 @@ public class ControlFlow_Conditions {
         System.out.print("Enter the grade: ");
 
         Scanner scan = new Scanner(System.in);
-        int score = scan.nextInt();
+        int tScore = scan.nextInt();
 
-        if(score >= 0 && score < 50) {
+        if(tScore >= 0 && tScore < 50) {
             System.out.println("You have failed");
-        } else if (score < 75) {
+        } else if (tScore < 75) {
             System.out.println("You scored a C");
-        } else if (score < 85) {
+        } else if (tScore < 85) {
             System.out.println("Congrats! You score a B");
-        } else if (score <= 100) {
+        } else if (tScore <= 100) {
             System.out.println("Congrats, you scored an A");
         } else {
             System.out.println("Please enter a valid score");
@@ -63,10 +63,10 @@ public class ControlFlow_Conditions {
             case 2:
                 System.out.println("Summer");
                 break;
-            case 1:
+            case 3:
                 System.out.println("Autumn");
                 break;
-            case 1:
+            case 4:
                 System.out.println("Winter");
                 break;
             default:
@@ -78,8 +78,8 @@ public class ControlFlow_Conditions {
         // javapoint.com/java-for-loop
             System.out.print("Enter the month: ");
 
-            Scanner scan = new Scanner(System.in);  // Class to load new Object
-            int input = scan.nextInt(); //method to insert properties
+            Scanner scan1 = new Scanner(System.in);  // Class to load new Object
+            int input = scan1.nextInt(); //method to insert properties
 
             switch(input) {
                 case 1:
@@ -103,4 +103,4 @@ public class ControlFlow_Conditions {
 
 
     }
-}
+
