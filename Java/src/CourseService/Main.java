@@ -7,16 +7,16 @@ public class Main {
         CourseService courseService = new CourseService();
 
         //Referring to the key of the HashMaps
-        String courseId1 = "math_01", courseId2 = "art_01";
+        String courseId = "math_01", courseId2 = "art_01";
         String studentId = "778979";
 
         //Display the information of the student and the courses
-        courseService.displayStudentInformation(studentId); //pass in key to the method
-        courseService.displayStudentInformation(courseId1);
-        courseService.displayStudentInformation(courseId2);
+        courseService.displayCourseInformation(courseId); //pass in key to the method
+        courseService.displayCourseInformation(courseId2);
+        courseService.displayStudentInformation(studentId);
 
         //To enroll a student to 2 courses
-        courseService.enrollStudent(studentId,courseId1);
+        courseService.enrollStudent(studentId,courseId);
         courseService.enrollStudent(studentId,courseId2);
         courseService.displayStudentInformation(studentId);
 
@@ -24,8 +24,21 @@ public class Main {
         courseService.totalEnrolledCourse((studentId)); //print 2
         courseService.totalCreidt(studentId);   //print 16
 
-        //To un-enrolll a course from the existing student
-        courseService.unEnrolledStudent(studentId, courseId1);
+        //To un-enroll a course from the existing student
+        courseService.unEnrolledStudent(studentId, courseId);
         courseService.displayStudentInformation(studentId);
+
+        //Added
+        Course course = courseService.findCourse("math_01");
+
+        if (course != null)
+        {
+            System.out.println("Course Found!");
+            System.out.println(course);
+        }
+        else
+        {
+            System.out.println("Unable to find course");
+        }
     }
 }

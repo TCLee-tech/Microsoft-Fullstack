@@ -12,8 +12,11 @@ public class Course {
         this._credits = credits;
     }
 
-    public int getCredit() {return this._credits; }
+    public int getCredit() {
+        return this._credits;
+    }
 
+    @Override
     public String toString() {
 
         //return "Course(" + "name='" + this._name + '\'' + ", id=' " + this._id + '\'' + ", credits=" + this._credits + '}';
