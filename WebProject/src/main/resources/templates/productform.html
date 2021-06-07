@@ -6,20 +6,21 @@
 </head>
 <body>
 
-<div th:insert="fragments/navbarhtml.html :: navbar"></div>
-<div th:insert="fragments/navbarhtml.html :: menuModal"></div>
+<div th:insert="fragments/navbar.html :: navbar"></div>
+<div th:insert="fragments/navbar.html :: menuModal"></div>
 
 
 <div class="jumbotron">
     <h1 class="display-4">New Product</h1>
-    <form id="newItemForm" enctype="multipart/form-data">
+    <form id="newItemForm" enctype="multipart/form-data">   //to pass various data to backend, esp images
         <div class="form-group">
             <label for="newItemNameInput">Name</label>
-            <input type="text" class="form-control" id="newItemNameInput" name = "newItemNameImput">
+            <input type="text" class="form-control" id="newItemNameInput" name =
+                    "newItemNameInput">    //the name="" is for passing data to backend
         </div>
         <div class="form-group">
             <label for="newItemDescription">Description</label>
-            <textarea type="text" class="form-control" id="newItemDescription" name = "newItemNameImput"></textarea>
+            <textarea type="text" class="form-control" id="newItemDescription" name = "newItemDescription"></textarea>
         </div>
 
         <div class="form-group">
@@ -39,14 +40,14 @@
             <input type="text" class="form-control" id="newItemPrice" name="newItemPrice">
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block">Save Item</button>
+        <button type="submit" class="btn btn-primary btn-block">Save Item</button>  //when submit button on website's Product Form is pressed, POST method, to Controller through POST API
     </form>
 </div> <!-- End of Product Form -->
 
 <div th:insert="fragments/footer.html :: footer"></div>
 
-<!-- SCRIPTS AND STYLES-->
-<!-- Bootstrap CSS -->
+<!-- SCRIPTS AND S>TYLES-->
+<!-- Bootstrap CSS --
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

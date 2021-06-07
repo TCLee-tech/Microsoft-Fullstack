@@ -4,9 +4,12 @@ const productsControl = new ProductsController();
 
 function loadData()
 {
-    //add Items to the ProductsController Class - items currently are hard coded into the class
-    //name : Cat Tee Black T-Shirt, description : 4 MSL, imageUrl : http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif
-    //style : Cat, price : 10
+    /*add Items to the ProductsController Class - items currently are hard coded into the class
+    name : Cat Tee Black T-Shirt,
+    description : 4 MSL,
+    imageUrl : http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif
+    style : Cat,
+    price : 10
     /*productsControl.addItem("Cat Tee Black T-Shirt", "4 MSL", "http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif", "Cat", 20);
 
     productsControl.addItem("Dog Tee Black T-Shirt", "5 MSL", "http://www.jennybeaumont.com/wp-content/uploads/2015/03/placeholder.gif", "Dog", 10);

@@ -23,13 +23,22 @@ public class Item {
     public Item() {}
 
     //Task 9
-    public Item(ItemDTO itemDTO)
+    public Item(ItemDTO itemDto)
     {
-        this.name = itemDTO.getName();
-        this.description = itemDTO.getDescription();
-        this.imageUrl = itemDTO.getImageUrl();
-        this.style = itemDTO.getStyle();
-        this.price = itemDTO.getPrice();
+        this.name = itemDto.getName();
+        this.description = itemDto.getDescription();
+        this.imageUrl = itemDto.getImageUrl();
+        this.style = itemDto.getStyle();
+        this.price = itemDto.getPrice();
+    }
+
+    //Overloading constructor
+    public Item(String name, String description, String imageUrl, String style, double price) {
+        this.name = name;
+        this.description = description;
+        this.imageUrl = imageUrl;
+        this.style = style;
+        this.price = price;
     }
 
     public Integer getId() {return id; }
@@ -44,7 +53,7 @@ public class Item {
 
     public void setDescription(String description) {this.description = description;}
 
-    public String getImageUrl() {return imageUrl; }
+    public String getImageUrl() {return "/productImages/" + imageUrl; }
 
     public void setImageUrl(String imageUrl) {this.imageUrl = imageUrl; }
 
@@ -59,6 +68,6 @@ public class Item {
     @Override
     public String toString()
     {
-        return "Item{" + "id=" + id + ", name='" + name + '\''+ ", description='" + description + '\'' + ", imageUrl" + imageUrl + '\'' + ",styles='" + style + '\'' + ", price='" + price + '}';
+        return "Item{" + "id=" + id + ", name='" + name + '\''+ ", description='" + description + '\'' + ", imageUrl='" + imageUrl + '\'' + ",styles='" + style + '\'' + ", price='" + price + '}';
     }
 }

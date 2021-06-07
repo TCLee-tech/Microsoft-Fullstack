@@ -1,4 +1,4 @@
-package org.generation.WebProject.service;
+package org.generation.WebProject.Service;
 
 import org.generation.WebProject.repository.Entity.Item;
 import java.util.List;
