@@ -17,8 +17,27 @@ public class CourseService {
         this._courses.put("math_01", new Course("Mathematics 1","math_01", 8));
         this._courses.put("biol_01", new Course("Biology 1", "biol_01", 8));
         this._courses.put("phys_01", new Course("Physics 1", "phys_01", 8));
+        this._courses.put("art_01", new Course("Arts 1", "art_01", 8));
         this._courses.put("chem_01", new Course("Chemistry 1", "chem_01", 8));
         this._courses.put("sport_01", new Course("Sports 1","sport_01",8));
+    }
+
+    public HashMap<String, Course> getCourse() { return this._courses; }
+
+    public void setCourse(String id, String name, int credit)
+    {
+        this._courses.put( id, new Course( name, id, credit ) );
+    }
+
+    public HashMap<String, Student> getStudent() { return this._students; }
+
+    public Course findCourse(String courseId)
+    {
+        if ( this._courses.containsKey( courseId ) )
+        {
+            return this._courses.get( courseId );
+        }
+        return null;
     }
 
     public void enrollStudent(String studentId, String courseId) {
@@ -53,15 +72,16 @@ public class CourseService {
         System.out.println("Total course enrolled: " + student.totalEnrollledCourses());
     }
 
-    public void totalCreidt(String studentId) {
+    public void totalCredit(String studentId) {
         //TO DO implement so it show the total number of course credits for the student
         int totalCredit = 0;
         Student student = this._students.get(studentId);
 
-        for(int i=0; i < student.totalEnrollledCourses(); i++) {
+        for(int i = 0; i < student.totalEnrollledCourses(); i++) {
             totalCredit += student.getEnrolledCourses().get(i)._credits;
         }
-        System.out.println("Total Credits =" + totalCredit);
+        System.out.println("Total Credit: " +  totalCredit);
+        //student.getEnrolledCourses().forEach(System.out::println);
+        //System.out.println("Total Credit: " + student.getEnrolledCourses().get("credits"));
     }
-
 }
