@@ -10,7 +10,7 @@ public class Circle extends Shape {
     @Override
     public double area() {
         //A = pie r^2
-        return this._pi = Math.pow(this._radius, 2);    //Circle Class implements this  //pow means power
+        return this._pi = Math.pow(this._radius, 2);    //Circle Class implements Shape; pow means power
     }
 
     @Override

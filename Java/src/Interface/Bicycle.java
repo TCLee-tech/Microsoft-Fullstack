@@ -6,7 +6,7 @@ public class Bicycle implement Vehicle {
 
     public int _speed;
     private int _gear;
-}
+
 
     //to change gear
     @Override

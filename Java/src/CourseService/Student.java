@@ -7,9 +7,9 @@ public class Student {
     String _name;
     String _id;
     ArrayList<Course> _enrolledCourses = new ArrayList<Course>();
-}
 
-public Student (String name, String id {
+
+public Student (String name, String id) {
     this._name = name;
     this._id = id;
 }
@@ -38,4 +38,4 @@ public List<Course> getEnrolledCourses() {return this._enrolledCourses;}
     //return "Student{" + "name=' " + this._name + '\'' + ", id='" + this._id + '\'' + ", enrolledCourses=" + this._enrolledCourses + '}';
 
     return String.format("Name: %s ID: %s, EnrolledCourses: ", this._name, this._id) + this._enrolledCourses;
-}
+    }}

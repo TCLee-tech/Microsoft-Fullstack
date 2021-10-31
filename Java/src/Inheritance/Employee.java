@@ -4,7 +4,7 @@ public class Employee {
     int _id;
     String _name;
     double _salary;
-}
+
 
     public Employee (int id, String name, double salary ) {
         this._id = id;
@@ -22,7 +22,7 @@ public class Employee {
 
     public String getName() {return this._name;}
 
-    public void setS alary (double salary) {
+    public void setSalary (double salary) {
         this._salary = salary;
     }
 
@@ -32,3 +32,4 @@ public class Employee {
     public String toString() {
         return String.format("Employee Id: %d, Name: %s, salary: %.2f.", this._id, this._name, this._salary);
     }
+}

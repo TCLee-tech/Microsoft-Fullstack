@@ -30,9 +30,9 @@ public class BankAccount {
     //withdraw, which subtracts from the balance, return true if deduct successfully
     public boolean Withdraw(double amount) {
 
-        if (this._balance - amount >=100) {
+        if (this._balance >=100) {
 
-            this._balance - amount;
+            this._balance -= amount;
             return true;
         }
         //default return from the method
@@ -61,7 +61,7 @@ public class BankAccount {
             return true;
         }
         return false;
-
+    }    
     //String method should be placed at the end of the entire Class
     //toString method is a string representation of an object
     //returns String Object

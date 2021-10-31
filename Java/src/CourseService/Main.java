@@ -22,7 +22,7 @@ public class Main {
 
         //To show the total enrolled courses and total credits for a student
         courseService.totalEnrolledCourse((studentId)); //print 2
-        courseService.totalCreidt(studentId);   //print 16
+        courseService.totalCredit(studentId);   //print 16
 
         //To un-enrolll a course from the existing student
         courseService.unEnrolledStudent(studentId, courseId1);
