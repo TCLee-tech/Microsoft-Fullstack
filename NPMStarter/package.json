@@ -15,7 +15,7 @@
   "author": "LTC",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^1.6.0",
     "complete-randomer": "^1.4.0"
   },
   "devDependencies": {
